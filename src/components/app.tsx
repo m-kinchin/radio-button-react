@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import RadioButton from './radio-button';
 import RadioGroup from './radio-group';
-import Value from './value';
 import { DefaultProps, MainState } from '../types';
 
 class App extends React.Component<DefaultProps, MainState> {
@@ -11,7 +10,7 @@ class App extends React.Component<DefaultProps, MainState> {
     super(props);
     this.state = {
       value: 'ALL'
-    } as MainState;
+    };
     this.onChange = this.onChange.bind(this);
   }
 
@@ -27,7 +26,7 @@ class App extends React.Component<DefaultProps, MainState> {
           <RadioButton value="NOTHING">Show nothing</RadioButton>
           <RadioButton value="ALL">Show all</RadioButton>
         </RadioGroup>
-        <Value value={this.state.value}/>
+        <div>{this.state.value}</div>
       </div>
     );
   }

@@ -14,3 +14,7 @@
 .pressed-button {
   background-color: #dddddd99;
 }
+
+.pressed-button:hover {
+  background-color: #dddddd99;
+}

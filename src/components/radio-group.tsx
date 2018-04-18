@@ -18,11 +18,12 @@ class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState> {
 
     this.renderChildren = this.renderChildren.bind(this);
     this.onChange = this.onChange.bind(this);
-    this.index = React.Children.toArray(this.props.children)
-      .findIndex(c => (c as React.ReactElement<RadioButtonProps>).props.value === this.state.value);
   }
 
   onChange(value: string | number | boolean) {
+    if (this.state.value === value) {
+      return;
+    }
     this.setState({value});
     this.props.onChange && this.props.onChange(value);
   }
