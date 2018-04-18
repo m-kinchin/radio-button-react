@@ -1,0 +1,16 @@
+.button {
+  border: 1px solid #999;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #eeeeee88;
+}
+
+.pressed-button {
+  background-color: #dddddd99;
+}
